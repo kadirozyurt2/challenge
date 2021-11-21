@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+   
+    
+
+</head>
+<body>
+
+    <header>
+        <div class="center">
+            <h1>Where in the world?</h1>
+        </div>
+    </header>
+
+    <section>
+        <div class="center">
+            <div class="filter">
+                <input type="text"  id='search' placeholder="Search for a country..." onkeyup="SearchByCountryName()" >
+                <select id="" onchange="SearchByRegionalFilter(this.value);">
+                    <option value="">Filter by Region</option>
+                    <option value="AU">Africa</option>
+                    <option value="USAN">America</option>
+                    <option value="ASEAN">Asia</option>
+                    <option value="EU">Europe</option>
+                    <option value="PA">Ocenia</option>
+                </select>
+            </div>
+
+
+            <div class="loading">
+                İçerik Yükleniyor...
+            </div>
+
+            <div class="notList" style="display: none;">
+                İçerik bulunamadı ☹
+            </div>
+
+
+            <ul class="countryList" id="countryList">
+                
+               <!-- <li>
+                    <a href="detail.html">
+                        <img src="assets/img/almanya.png" alt="">
+                        <span class="textArea">
+                            <h3>Germany</h3>
+                            <p>
+                                <b>Population:</b> <span>81,770,900</span>
+                            </p>
+                            <p>
+                                <b>Region:</b> <span>Europe</span>
+                            </p>
+                            <p>
+                                <b>Capital:</b> <span>Berlin</span>
+                            </p>
+                        </span>
+                    </a>
+                </li> -->
+
+ 
+            </ul>
+        </div>
+    </section>
+
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <!-- js -->
+
+</body>
+</html>
