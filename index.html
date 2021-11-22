@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>Home</title>
     <link rel="stylesheet" href="assets/css/style.css">
-   
-    
-
 </head>
 <body>
-
+    <!-- header -->
     <header>
         <div class="center">
             <h1>Where in the world?</h1>
         </div>
     </header>
+    <!-- header -->
 
+    <!-- content -->
     <section>
         <div class="center">
             <div class="filter">
@@ -31,41 +30,12 @@
                     <option value="PA">Ocenia</option>
                 </select>
             </div>
-
-
-            <div class="loading">
-                İçerik Yükleniyor...
-            </div>
-
-            <div class="notList" style="display: none;">
-                İçerik bulunamadı ☹
-            </div>
-
-
-            <ul class="countryList" id="countryList">
-                
-               <!-- <li>
-                    <a href="detail.html">
-                        <img src="assets/img/almanya.png" alt="">
-                        <span class="textArea">
-                            <h3>Germany</h3>
-                            <p>
-                                <b>Population:</b> <span>81,770,900</span>
-                            </p>
-                            <p>
-                                <b>Region:</b> <span>Europe</span>
-                            </p>
-                            <p>
-                                <b>Capital:</b> <span>Berlin</span>
-                            </p>
-                        </span>
-                    </a>
-                </li> -->
-
- 
-            </ul>
+            <div class="loading"><img src="assets/img/loader.gif" alt=""></div> 
+            <div class="notList" style="display: none;">İçerik bulunamadı ☹</div>
+            <ul class="countryList" id="countryList"></ul>
         </div>
     </section>
+    <!-- content -->
 
     <!-- js -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

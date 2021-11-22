@@ -65,12 +65,12 @@ section .center .back span, section .center .back img{ position: relative; z-ind
 section .center .back img{ height:12px; margin-right:12px; }
 
 
-section .center .detailContainer{width:100%;flex-wrap: wrap;width: 100%;justify-content: space-between;display: grid;grid-template-columns: repeat(auto-fill, 50%);}
+section .center .detailContainer{width:100%;flex-wrap: wrap;width: 100%;justify-content: space-between;display: grid;grid-template-columns: repeat(auto-fill, 50%);position: relative;}
 section .center .detailContainer .left{width: 100%;display: flex;align-items: center; padding-right:100px;}
-section .center .detailContainer .left img{ width:100%;}
+section .center .detailContainer .left img{width:100%;height: 400px;object-fit: cover;}
 section .center .detailContainer .right{width: 100%;padding-top: 48px;display: flex;flex-direction: column;}
 section .center .detailContainer .right h3{font-weight: bold;font-size: 32px;margin-bottom: 30px;}
-section .center .detailContainer .right .textArea{width:100%;display: flex;margin-bottom: 54px;}
+section .center .detailContainer .right .textArea{width:100%;display: flex;margin-bottom: 0;}
 section .center .detailContainer .right .textArea .colm{ width:calc(100%/2); }
 section .center .detailContainer .right .textArea .colm p{margin-bottom: 16px;font-size: 14px;}
 section .center .detailContainer .right .textArea .colm p:last-child{ margin-bottom: 0;}
@@ -78,13 +78,15 @@ section .center .detailContainer .right .textArea .colm p b{ font-weight: 700;}
 section .center .detailContainer .right .textArea .colm p span{ opacity: .8;}
 
 
-section .center .detailContainer .right .btns{ display: flex; }
-section .center .detailContainer .right .btns span{margin-right:16px;font-size:14px;display: flex;align-items: center;}
-section .center .detailContainer .right .btns .btn{display: flex;align-items: center;}
-section .center .detailContainer .right .btns .btn a{background: #2b3743;color:#fff;font-size:12px;-webkit-box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 25%);-moz-box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 25%);box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 25%);margin-right: 10px;height: 28px;padding: 0 18px;display: flex;justify-content: center;align-items: center;border-radius: 5px; position: relative; overflow: hidden;}
-section .center .detailContainer .right .btns .btn a:after{width:100%;background: #3c4d5e;height: 0;position: absolute;left:0;top:0;content: '';transition: 0.4s ease-in-out 0s;}
-section .center .detailContainer .right .btns .btn a small{ position: relative; z-index: 2; font-size:12px}
-section .center .detailContainer .right .btns .btn a:hover:after{height:100%;}
+section .center .detailContainer .btns{position: absolute;right: 0;bottom: 0;width: 50%;display: flex;}
+section .center .detailContainer .btns span{margin-right: 20px;font-size: 14px;display: flex;align-items: center;/* width: 100%; */}
+section .center .detailContainer .btns .btn{display: flex;align-items: center;}
+section .center .detailContainer .btns .btn a{background: #2b3743;color:#fff;font-size:12px;-webkit-box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 25%);-moz-box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 25%);box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 25%);margin-right: 10px;height: 28px;padding: 0 18px;display: flex;justify-content: center;align-items: center;border-radius: 5px; position: relative; overflow: hidden;}
+section .center .detailContainer .btns .btn a:after{width:100%;background: #3c4d5e;height: 0;position: absolute;left:0;top:0;content: '';transition: 0.4s ease-in-out 0s;}
+section .center .detailContainer .btns .btn a small{ position: relative; z-index: 2; font-size:12px}
+section .center .detailContainer .btns .btn a:hover:after{height:100%;}
+section .center .detailContainer .btns .btnsArea{display: flex;}
+
 
 .loading, .notList{ color:#fff; font-size:17px; justify-content: center; display: flex; }
 
@@ -95,23 +97,34 @@ section{ padding:20px; padding-top:0;}
 section .center .detailContainer .right{ padding-top:0;}
 }
 
-
 @media screen and (max-width: 1020px) {
-    section .center .detailContainer .left{ padding-right: 0; margin-bottom: 40px;}
-    section .center .detailContainer{ grid-template-columns: repeat(auto-fill, 100%);}
+section .center .detailContainer .left{ padding-right: 0; margin-bottom: 40px;}
+section .center .detailContainer{ grid-template-columns: repeat(auto-fill, 100%);}
+section .center .detailContainer .btns{left:0;width:100%;position: relative;flex-wrap: wrap;margin-top: 30px;} 
+section .center .detailContainer .btns .btnsArea{ margin-top:15px; flex-wrap:wrap;}
+section .center .detailContainer .btns .btn{ margin-bottom:10px;}
 }
 
 @media screen and (max-width: 778px) {
-.countryList {display: flex;grid-template-columns:initial;flex-wrap:wrap;justify-content: space-between;}
+.countryList {display: flex;grid-template-columns:initial;flex-wrap:wrap;justify-content: center;width: 81%;align-items: center;margin: auto;}
 .countryList li{width: 47%;}
-.center h1{ font-size:24px}
-header{ height:60px;}
+.center h1{font-size: 19px;}
+header{height: 45px;}
 section .center .back{ margin:0px 0 40px 0}
 }
 
 @media screen and (max-width: 640px) {
-.countryList li{width: 100%;}
-section .center .filter input{ width:100%;}
+.countryList li{width: 100%;margin-bottom: 30px;}
+section .center .filter input{width:100%;margin-bottom: 20px;padding-left: 50px;background: #2b3743 url(../img/search.png) no-repeat 19px 50%;background-size: 20px;height: 46px;}
+section .center{ padding-top:20px}
+.nice-select{ margin-bottom:30px;}
+.countryList li .textArea{ padding:20px;}
+section .center .detailContainer .right .textArea .colm{width:100%; margin-bottom:30px;}
+section .center .detailContainer .right .textArea{ flex-direction: column;}
+section .center .detailContainer .right .btns .btn a{padding: 0 7px;}
+section .center .detailContainer .right .btns .btn{ flex-wrap: wrap;}
+section .center .detailContainer .right .btns span, section .center .detailContainer .right .btns .btn a small{ font-size:11px;}
+section .center .detailContainer .left img{ height:auto; object-fit:initial;}
 }
 
     
